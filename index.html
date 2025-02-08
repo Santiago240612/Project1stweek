@@ -6,7 +6,42 @@
     <title>Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1 class="text-3xl font-bold">Hello, Team!</h1>
-</body>
+<body> 
+    <header class="flex items-center justify-between w-full px-8 py-4 bg-blue-100">
+        <div>
+            <img src="logo.png" alt="Company Logo" class="h-40 w-auto">
+        </div>
+    
+        <!-- Centered and Stretched Navigation Links -->
+        <nav class="flex-grow flex justify-center space-x-20">
+            <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">How it Works</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Rental Details</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Why Choose Us</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Testimonial</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Register</a>
+        </nav>
+    
+        <!-- Right-aligned Login Button -->
+        <div>
+            <a href="#" class="px-3 py-2 bg-blue-500 text-white rounded">Login</a>
+        </div>
+    </header>
+    <section class="hero flex items-center justify-between bg-gray-100 p-10">
+        <!-- Left side: Text content -->
+        <div class="w-1/2">
+            <h1 class="text-5xl font-bold mb-4">Amalfi Car Rentals</h1>
+            <p class="text-lg text-gray-600 mb-6">The best wheels in town...</p>
+            <div class="space-x-4">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded">Booking Now</button>
+                <button class="px-6 py-2 border border-gray-300 rounded">See All Cars</button>
+            </div>
+        </div>
+    
+        <!-- Right side: Image -->
+        <div class="w-1/2">
+            <img src="hero-image.jpg" alt="Luxury Car" class="w-full rounded-xl">
+        </div>
+    </section>
+</body>1
 </html>
