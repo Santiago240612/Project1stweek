@@ -52,9 +52,82 @@
         </div>
     </section>
 
+<!-- Pickup and Drop-Off Banner -->
+<div class="relative -mt-12 bg-gray-200 p-6 rounded-lg shadow-lg max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Pickup Options -->
+        <div class="space-y-2">
+            <div class="flex items-center">
+                <input type="radio" name="trip" id="pickup" class="mr-2">
+                <label for="pickup" class="font-semibold">Pick - Up</label>
+            </div>
 
+            <!-- Accordion using <details> -->
+            <details class="border rounded-lg">
+                <summary class="p-2 cursor-pointer text-gray-700 font-semibold">Locations, Date, Time</summary>
+                <div class="grid grid-cols-3 gap-4 p-4">
+                    <div>
+                        <label class="block text-sm text-gray-600">Locations</label>
+                        <select class="w-full p-2 border rounded">
+                            <option>Select your city</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-600">Date</label>
+                        <select class="w-full p-2 border rounded">
+                            <option>Select your date</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-600">Time</label>
+                        <select class="w-full p-2 border rounded">
+                            <option>Select your time</option>
+                        </select>
+                    </div>
+                </div>
+            </details>
+        </div>
 
+        <!-- Drop-Off Options -->
+        <div class="space-y-2">
+            <div class="flex items-center">
+                <input type="radio" name="trip" id="dropoff" class="mr-2">
+                <label for="dropoff" class="font-semibold">Drop - Off</label>
+            </div>
 
+            <!-- Accordion using <details> -->
+            <details class="border rounded-lg">
+                <summary class="p-2 cursor-pointer text-gray-700 font-semibold">Locations, Date, Time</summary>
+                <div class="grid grid-cols-3 gap-4 p-4">
+                    <div>
+                        <label class="block text-sm text-gray-600">Locations</label>
+                        <select class="w-full p-2 border rounded">
+                            <option>Select your city</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-600">Date</label>
+                        <select class="w-full p-2 border rounded">
+                            <option>Select your date</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-600">Time</label>
+                        <select class="w-full p-2 border rounded">
+                            <option>Select your time</option>
+                        </select>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- Search Button -->
+    <div class="mt-4 text-center">
+        <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Search</button>
+    </div>
+</div>
 
 
     
