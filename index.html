@@ -7,8 +7,61 @@
     <style type="text/tailwindcss">
         @theme {
         --color-clifford: #da373d;
+
     }
     </style>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .tab-labels {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .tab-labels label {
+        padding: 10px 15px;
+        /* border: 1px solid #ccc;
+        border-radius: 5px 5px 0 0; */
+        background: #eee;
+    }
+    .tab-labels label:hover {
+        background: #ddd;
+    }
+    .tab-content {
+        /* border: 1px solid #ccc; */
+        padding: 20px;
+        background: #fff;
+        display: none;
+    }
+    /* Hide radio buttons */
+    input[type="radio"] {
+        display: none;
+    }
+    /* Show the selected tab content */
+    #tab1:checked ~ .content1,
+    #tab2:checked ~ .content2,
+    #tab3:checked ~ .content3,
+    #tab4:checked ~ .content4 {
+        display: grid;
+    }
+    /* Highlight active tab */
+    #tab1:checked ~ .tab-labels label[for="tab1"],
+    #tab2:checked ~ .tab-labels label[for="tab2"],
+    #tab3:checked ~ .tab-labels label[for="tab3"],
+    #tab4:checked ~ .tab-labels label[for="tab4"] {
+        background: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+
+</style>
 
     <title>Document</title>
 </head>
@@ -132,29 +185,100 @@
 
     
     <!-- Main container  -->
-<div class="max-w-6xl mx-auto p-6">
+<div class="max-w-6xl mx-auto p-6 tabs">
 
     <h1 class="text-4xl text-center  mb-10 text-blue-300">Lorem ipsum dolor sit amet,</h1>
     <p class="mb-20">Lorem eaque natus esse eius animi nobis fugiat, et quisquam accusamus sit recusandae reprehenderit ratione.</p>
 
-
-    <div class="flex space-x-4 justify-between mb-5">
+ <!-- Radio buttons -->
+ <input type="radio" id="tab1" name="tab-group" checked>
+ <input type="radio" id="tab2" name="tab-group">
+ <input type="radio" id="tab3" name="tab-group">
+ <input type="radio" id="tab4" name="tab-group">
+    <div class="flex space-x-4 justify-between mb-5 tab-labels">
         
-    
+<!--     
     <h2 class="text-black font-semibold text-center text-opacity-60 cursor-pointer shadow-xl border-opacity-20 transition-opacity hover:bg-gray-600 ">Popular</h2>
     <h2 class="text-black font-semibold text-center text-opacity-60 cursor-pointer shadow-xl border-opacity-20 transition-opacity hover:bg-gray-600">Large car</h2>
     <h2 class="text-black font-semibold text-center text-opacity-60 cursor-pointer shadow-xl border-opacity-20 transition-opacity hover:bg-gray-600 ">Small car</h2>
-    <h2 class="text-black font-semibold text-center text-opacity-60 cursor-pointer shadow-xl border-opacity-20 transition-opacity  hover:bg-gray-600">Exclusive car</h2>
+    <h2 class="text-black font-semibold text-center text-opacity-60 cursor-pointer shadow-xl border-opacity-20 transition-opacity  hover:bg-gray-600">Exclusive car</h2> -->
+
+    <label for="tab1">Popular</label>
+    <label for="tab2">Large car</label>
+    <label for="tab3">Small car</label>
+    <label for="tab4">Exclusive car</label>
+   
 </div>
     <!-- Grid Container for cards-->
 
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 tab-content content1 ">
 
         <!-- Card 1 -->
 <div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/tesla-roadster-parked-red-house-driveway.webp" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 2 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/download.jpeg" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 3 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/camry.jpg" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 4 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/2019-mercedes-benz-g-class.jpg" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 5 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/download (1).jpeg" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 6-->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
     <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
         <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 7 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 8-->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        
+    </div>
+ <div class="tab-content content2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 content2 ">
+
+        <!-- Card 1 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/ygius0snoyezdhfjek2n.avif" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">Al</h2>
         <p class="text-gray-900 mt-2">This is a sample card description</p>
         <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
 </div>
@@ -209,6 +333,146 @@
 </div>
         
     </div>
+
+
+    
+ </div>
+
+ <div class="tab-content content3">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 content3 ">
+
+        <!-- Card 1 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/download (2).jpeg" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">T</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 2 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 3 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 4 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 5 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 6-->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 7 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 8-->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        
+    </div>
+
+
+    
+ </div>
+
+
+ <div class="tab-content content4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 content4 ">
+
+        <!-- Card 1 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="/2024-bugatti-mistral.jpg" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">h</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 2 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 3 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 4 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 5 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 6-->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 7 -->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        <!-- Card 8-->
+<div class="bg-gray-400 rounded-lg  shadow-lg p-6 hover:shadow-xl transition">
+    <image src="https://via.placeholder.com/300" alt="Card Image"  class="rounded-lg mb-4">
+        <h2 class="text-xl font-bold">All New Rush</h2>
+        <p class="text-gray-900 mt-2">This is a sample card description</p>
+        <button class="mt-4 px-4 py-2 bg-pink-300 text-gray-300 rounded-lg hover:bg-green-400 " >Rent now</button>
+</div>
+        
+    </div>
+
+
+    
+ </div>
+
+
+    
 </div>
 
 
